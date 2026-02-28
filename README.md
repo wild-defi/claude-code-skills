@@ -34,7 +34,7 @@ Convene a virtual board of advisors to get multi-perspective feedback on any que
 ```bash
 mkdir -p .claude/commands
 curl -o .claude/commands/board-of-advisors.md \
-  https://raw.githubusercontent.com/bakiworld/claude-code-skills/main/commands/board-of-advisors.md
+  https://raw.githubusercontent.com/wild-defi/claude-code-skills/main/commands/board-of-advisors.md
 ```
 
 3. Open Claude Code in your project and run:
@@ -46,7 +46,7 @@ curl -o .claude/commands/board-of-advisors.md \
 ### Option 2 — Clone the full repo
 
 ```bash
-git clone https://github.com/bakiworld/claude-code-skills.git
+git clone https://github.com/wild-defi/claude-code-skills.git
 cp claude-code-skills/commands/board-of-advisors.md your-project/.claude/commands/
 ```
 
