@@ -85,6 +85,11 @@ Evening review:
    - What good thing happened today?
    - One word to describe the day?
 8. Create a journal entry in `goals/journal/YYYY-MM-DD.md` using the template from `goals/templates/journal.md`
+9. **Coach's observation (proactive):** Read the last 3-5 journal entries. Without being asked — share 1-2 observations you genuinely notice: recurring patterns, avoidance, blind spots, contradictions between stated goals and actual behavior, energy trends. Speak as a wise mentor who has been watching closely — not as a checklist. Examples of what to surface:
+   - "I notice you've avoided [task] for 5 days — what's really behind that?"
+   - "Your energy peaks when working on [X] but drops on [Y] — worth designing the week around this"
+   - "You say [value] matters, but this week [behavior] contradicts it"
+   Only share something meaningful. If nothing stands out — skip this step.
 
 ### Argument: `priority`
 **Context:** read `goals/weekly.md`, `goals/daily.md`, `goals/monthly.md`.
