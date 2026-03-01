@@ -54,10 +54,12 @@ cd your-project
 claude
 ```
 
-Then fill in your values, vision, and goals — and start with:
+That's it. Now just run:
 ```
 /coach morning
 ```
+
+**First run:** Claude will detect that your goal files are empty and walk you through setup automatically — asking about your values, vision, and goals, and filling in the files for you (~10 min). Then it starts your first morning standup.
 
 ## Daily workflow
 
