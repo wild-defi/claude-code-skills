@@ -20,7 +20,8 @@ goals/
 ```
 
 ### Available Commands
-- `/coach [morning|evening|priority|stuck|motivation]` — personal coach
+- `/daily-review` — **recommended daily command**: closes yesterday + plans today in one session
+- `/coach [priority|stuck|motivation]` — prioritization, unblocking, motivation boost
 - `/goals [status|add|decompose|done|edit|align|backlog]` — goal tree management
 - `/weekly-review` — weekly retrospective and planning
 - `/monthly-review` — monthly strategic review
@@ -42,7 +43,7 @@ goals/
 
 ### Key Mechanics
 - **Carry-over:** morning standup checks yesterday's unfinished tasks and carries them forward
-- **Escalation:** task carried over 3+ days → coach asks: break down / delegate / remove?
+- **Escalation:** task carried over 3+ days → coach first asks "what's really blocking this?" then offers options: break down / delegate / remove / schedule a specific slot
 - **Sync:** evening review updates both daily.md and weekly.md (tasks + habits)
 - **Habit tracker:** table in weekly.md updated every evening
 - **Backlog:** checked every morning and during weekly planning

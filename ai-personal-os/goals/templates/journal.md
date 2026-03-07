@@ -1,25 +1,26 @@
-# DD месяц YYYY — день недели
+# DD Month YYYY — Weekday
 
-## Что сделано
+## Done
 -
 
-## Что не закончено
-- (задача → причина → перенос на завтра / убрать / разбить)
+## Not finished
+- (task → reason → carry over to tomorrow / remove / break down)
 
-## Рефлексия
-- **Состояние:** (энергия, настроение)
-- **Фокус:** (удавалось ли фокусироваться? на какие мысли отвлекался?)
-- **Хорошее:** (что хорошего случилось сегодня?)
-- **День одним словом:**
+## Reflection
+- **State:** (energy, mood)
+- **Focus:** (was I able to focus? what thoughts distracted me?)
+- **Good thing:** (what good thing happened today?)
+- **One word for the day:**
 
-## Наблюдения
+## Observations
 -
 
-## Наблюдение коуча
--
+## Coach's observation
+- [pattern/observation] → [question or insight]
 
-## Привычки
-- [ ] Медитация 30 мин
-- [ ] Английский 15 мин
-- [ ] Сон до 23:00
-- [ ] Спорт
+## Habits
+- [ ] Meditation 30 min
+- [ ] Language practice 15 min
+- [ ] Sleep by 11pm
+- [ ] Exercise
+- [ ] Claude Code 30min+

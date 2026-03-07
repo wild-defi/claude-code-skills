@@ -50,16 +50,18 @@ Then immediately proceed with the **morning standup** below.
 ## Modes
 
 ### Argument: `morning` or no argument
-**Context:** read `goals/weekly.md` and `goals/daily.md`.
+**Context:** read `goals/weekly.md`, `goals/daily.md`, and `goals/monthly.md`.
 
 Morning standup:
 1. Check yesterday's `daily.md` — carry over incomplete tasks with note "carried over from [date]"
-2. **Escalation rule:** if a task has been carried over 3+ days — explicitly ask: "This task has been pending for [N] days. Options: (a) break into smaller steps, (b) delegate, (c) remove / move to next week. What do you choose?"
+2. **Escalation rule:** if a task has been carried over 3+ days — don't just offer options. First ask: *"What's really blocking this? Fear, unclear next step, low energy, waiting on something — or just not feeling it?"* Wait for the answer. Then, based on what they say, offer targeted options: (a) break into a smaller first step that takes ≤ 15 min, (b) delegate, (c) remove / move to next week, (d) schedule a specific slot. The goal is to surface the real blocker, not just move the task.
 3. Review weekly plan and progress
-4. Check `goals/backlog.md` — if there are urgent tasks, suggest adding to today's plan
-5. Propose today's tasks tied to weekly/monthly goals (+ urgent backlog items)
-6. Ask 1 focusing question: "What single thing today will move you forward most?"
-7. After confirmation — update `goals/daily.md`
+4. **Velocity check:** count completed vs total monthly goals. Calculate days elapsed in month. If completion % is significantly behind time elapsed % — name it: "You're at X% of monthly goals with Y% of the month gone. Today matters."
+5. Check `goals/backlog.md` — if there are urgent tasks, suggest adding to today's plan
+6. **Energy check:** ask "Energy today — high, medium, or low?" Then order tasks accordingly: high energy → strategic/creative tasks first; low energy → quick wins and admin first
+7. Propose today's tasks tied to weekly/monthly goals (+ urgent backlog items)
+8. Ask 1 focusing question: "What single thing today will move you forward most?"
+9. After confirmation — update `goals/daily.md`
 
 **Daily planning rules (required):**
 - **Limit:** total tasks = no more than 6 hours. Do not plan more.
@@ -68,6 +70,7 @@ Morning standup:
   - Example: `[0.5h] Call bank — Metric: agreed on next step or received a decision`
 - **Decomposition:** if a task > 1h → break into subtasks ≤ 1h each, list separately
 - **Measurability:** every task needs a clear metric — binary result or concrete output (document, message, decision). Not allowed: "work on X". Allowed: "write draft of section X (300 words)"
+- **Calibration:** strategic tasks (planning, writing, analysis) consistently run 2-4x longer than initial estimates. If a task of this type is in the plan, ask the user to confirm the estimate is realistic before locking it in.
 
 ### Argument: `evening`
 **Context:** read `goals/daily.md` and `goals/weekly.md`.
@@ -77,7 +80,7 @@ Evening review:
 2. Update `goals/daily.md` — mark completed items
 3. **Update `goals/weekly.md`:** mark `[x]` tasks closed this week. Update habit tracker for today
 4. If something wasn't done — ask why, without judgment
-5. **Calibration:** if a task took significantly more or less time than estimated — note it briefly. Helps plan better tomorrow.
+5. **Calibration:** if a task took >50% more or less time than estimated — call it out explicitly. Name the pattern: "Strategic tasks are running 3-4x your estimates this week. Next time, plan [task type] as [adjusted time]." This builds a mental model for better planning.
 6. Offer to carry over unfinished tasks or remove if no longer relevant
 7. **Reflection — ask these questions:**
    - How did you feel today? (energy, mood)
