@@ -34,6 +34,20 @@ Read:
 - Show how this week's results moved the monthly goals forward
 - If behind — suggest a correction
 
+### 4a. Experiment check (`goals/experiments.md`)
+- Find experiments whose **review date** has arrived (status `active` → `due`)
+- For each, compare reality against the **success signal** → verdict:
+  - ✅ worked → keep the rail; if it's a habit, move it into the `weekly.md` tracker
+  - ❌ didn't work → it's data, not failure → propose a **different** rail (never "more discipline")
+  - ❔ unclear → extend the review date or sharpen the signal
+- Move resolved experiments to the "Done" section
+
+### 4b. Project heartbeat (`projects/_status.md`)
+- For each `Active` project, confirm the "last progress" date
+- 🚩 Flag any Active project with no progress for **2+ weeks** → fork: revive (one action + a rail) / park / kill
+- Check the WIP limit (Active ≤ 5); if over, something must move to Parked/Dead before new work starts
+- Update the table's "as of" date
+
 ### 5. Next week planning
 - Ask about the user's plans and circumstances for next week
 - Based on monthly goals, propose 3-5 Priority A tasks

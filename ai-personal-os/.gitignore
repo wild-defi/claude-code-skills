@@ -1,0 +1,33 @@
+# Private — never commit personal content.
+
+# Inner Work System (psyche, relationships, reflections) — fully private.
+# Keep the folder skeleton (README, INDEX, empty .gitkeep dirs); ignore all real content.
+goals/IWS/**
+!goals/IWS/**/
+!goals/IWS/README.md
+!goals/IWS/IWS-INDEX.md
+!goals/IWS/**/.gitkeep
+
+# Daily journal entries
+goals/journal/**
+!goals/journal/.gitkeep
+
+# Raw session captures (full transcripts) and processed notes
+captures/raw/**
+!captures/raw/.gitkeep
+captures/processed/**
+!captures/processed/.gitkeep
+
+# Memory contents (keep the README + MEMORY.md template only)
+memory/telemetry/access-log.jsonl
+memory/telemetry/state.json
+memory/archive/**
+memory/*_*.md
+
+# Profile with real personal data (keep README + template)
+profile/*.md
+!profile/README.md
+!profile/profile-template.md
+
+# OS noise
+.DS_Store

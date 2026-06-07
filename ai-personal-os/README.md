@@ -1,81 +1,110 @@
-# 🗂️ AI Personal OS — Goal Planning System
+# 🗂️ AI Personal OS
 
-A complete personal productivity system built on top of Claude Code. Instead of Notion or Todoist, you get an AI partner that actively thinks with you — planning your day, tracking habits, running weekly reviews, and keeping you aligned with your goals.
+A complete personal operating system built on top of Claude Code. Instead of stitching together
+Notion, Todoist, and a journaling app, you get an AI partner that thinks with you — planning your
+day, tracking habits, running reviews, capturing content, guarding which projects you take on, and
+remembering what matters across sessions.
 
-## What's included
+It started as a goal planner. It grew into a full OS. Everything here is a **template** — clone it,
+fill it with your own life, keep the private parts private.
 
-**6 slash commands:**
-- `/coach morning` — daily standup: carries over unfinished tasks, proposes a focused plan (max 6h, tasks ≤1h each with measurable metrics)
-- `/coach evening` — evening review: logs completed work, updates habit tracker, writes your journal entry
-- `/coach priority|stuck|motivation` — prioritization, unblocking, motivational boost
-- `/goals` — manage your goal tree (values → vision → yearly → monthly → weekly → daily)
-- `/weekly-review` — weekly retrospective and planning
-- `/monthly-review` — monthly strategic review
+## What's inside
 
-**Goal hierarchy files:**
 ```
-goals/
-├── values.md        # Your core values
-├── vision.md        # 3-5 year vision
-├── yearly.md        # Annual goals
-├── monthly.md       # This month's goals
-├── weekly.md        # This week + habit tracker
-├── daily.md         # Today's tasks
-├── backlog.md       # One-off tasks (not tied to goals)
-├── journal/         # Daily entries (auto-created by /coach evening)
-└── templates/       # Journal template
+ai-personal-os/
+├── goals/          # The goal tree: values → vision → yearly → monthly → weekly → daily
+│                   # + experiments (rails as hypotheses), idea→production gate, journal, IWS
+├── content-mgmt/   # Content pipeline: capture idea → research → draft per platform
+├── projects/       # Product projects in _ideas / _active / _archive + a health heartbeat
+├── captures/       # Auto-capture sessions → distill into content material
+├── memory/         # Living Memory: file-based memory with heat + telemetry
+├── profile/        # Your background, for outbound writing
+├── .claude/        # 10 commands + hooks + settings
+└── CLAUDE.md       # The rules that wire it all together
 ```
 
-**How tasks work:**
-Every task follows the format:
-```
-[Xh] Task name — Metric: [what "done" looks like]
-```
-- Daily limit: **6 hours max**
-- Any task >1h is automatically decomposed into ≤1h subtasks
-- Tasks that carry over 3+ days trigger an escalation prompt: break down / delegate / remove?
+## The 10 commands
+
+**Daily loop**
+- `/daily-review` — **the main daily command**: closes yesterday (tasks, habits, journal) and plans
+  today (max 6h, each task with a measurable metric) in one session
+- `/coach [priority|stuck|motivation]` — prioritization, unblocking, a motivational push
+
+**Reviews**
+- `/goals` — manage the goal tree (values → … → daily) and backlog
+- `/weekly-review` — weekly retrospective, habit review, experiment check, project heartbeat
+- `/monthly-review` — monthly strategic review (and the only place identity-level notes are promoted)
+
+**Thinking & deciding**
+- `/decide` — a decision advisor using frameworks from Dalio, Kahneman, Damasio, Haidt, Taleb
+- `/board-of-advisors` — convene a simulated board (real people or roles) + a mandatory pre-mortem
+
+**System upkeep**
+- `/process-captures` — turn captured sessions into post ideas
+- `/weekly-improvement` — analyze your week and propose the few highest-leverage changes
+- `/memory-consolidate` — update memory heat scores, archive cold memories
+
+## Key mechanics
+
+**Tasks.** Every task is `[Xh] Task — Metric: [what "done" looks like]`. Daily limit 6h; anything
+over 1h is decomposed. A task carried over 3+ days triggers an escalation: what's *really* blocking
+this — break down / delegate / remove / schedule a slot?
+
+**Experiments — rails over willpower.** New interventions (a deadline, a block, a public commitment)
+are logged as hypotheses with a success signal and a review date. `/weekly-review` checks the ones
+that came due. A failed experiment is *data, not failure* — you try a different rail, not "more
+discipline".
+
+**Project heartbeat + alignment gate.** Projects live in `_ideas / _active / _archive`. A project
+becomes Active only after passing **Gate 0** (is this *mine*? is there a rail? does it drain or
+charge me?) and within a WIP limit. `_status.md` flags any Active project stalled 2+ weeks — weeks
+before it would show up as a red yearly goal.
+
+**Living Memory.** Facts live one-per-file with a heat score. Hot memories stay in context; cold
+ones fade and get archived. Telemetry logs only rare, high-signal events.
+
+**IWS (Inner Work System).** A private, gitignored space for reflection, states, and relationships —
+deliberately separated from the goals/KPI side. Only the concept and empty templates ship here.
+
+## Privacy
+
+The whole thing is built to be shared as a system while keeping your life private. `.gitignore`
+excludes `goals/IWS/`, `goals/journal/`, `captures/`, memory contents, and your real profile.
+What's committed is structure, rules, and templates — not your data.
 
 ## Installation
 
 ```bash
-# 1. Clone the repo
+# 1. Clone
 git clone https://github.com/wild-defi/claude-code-skills.git
 
-# 2. Copy commands to your project
-mkdir -p your-project/.claude/commands
-cp claude-code-skills/ai-personal-os/commands/* your-project/.claude/commands/
+# 2. Copy the OS into your project
+cp -r claude-code-skills/ai-personal-os/. your-project/
 
-# 3. Copy the goal system
-cp -r claude-code-skills/ai-personal-os/goals your-project/
-cp claude-code-skills/ai-personal-os/CLAUDE.md your-project/
-
-# 4. Open Claude Code in your project
+# 3. Open Claude Code there
 cd your-project
 claude
 ```
 
-That's it. Now just run:
+Then run:
 ```
-/coach morning
+/daily-review
 ```
 
-**First run:** Claude will detect that your goal files are empty and walk you through setup automatically — asking about your values, vision, and goals, and filling in the files for you (~10 min). Then it starts your first morning standup.
+**First run:** Claude detects empty goal files and walks you through setup — your values, vision,
+and goals (~10 min) — then starts your first review. Fill in `content-mgmt/voice.md` and
+`profile/profile-template.md` whenever you want those workflows to sound like you.
 
 ## Daily workflow
 
 ```
-Morning → /coach morning   (plan your day)
-Evening → /coach evening   (review + journal)
-Sunday  → /weekly-review   (retrospective + next week)
+Morning/evening → /daily-review     (close yesterday + plan today)
+When stuck      → /coach stuck      (or /decide for a hard call)
+Sunday          → /weekly-review    (+ /memory-consolidate, /weekly-improvement)
+Month end       → /monthly-review
 ```
 
-## Example
+## A note on language
 
-> **Morning standup**
-> Claude reads your weekly goals and yesterday's tasks. Carries over unfinished items. Proposes today's plan — max 6 hours, each task with a measurable metric.
->
-> **Evening review**
-> Claude asks what you completed. Updates the habit tracker. Asks 3 reflection questions. Writes a journal entry automatically.
->
-> **Escalation**
-> If a task has been carried over 3+ days, Claude asks: "This task has been pending for 3 days. Break it down / delegate / remove?"
+This template is in English. The system was originally run in Russian — it works in any language.
+Set your preference in `CLAUDE.md` and tell Claude which outputs go in which language.
