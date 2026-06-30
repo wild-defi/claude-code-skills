@@ -22,6 +22,7 @@ When in doubt — ask, don't act.
 │   ├── daily.md
 │   ├── backlog.md          # One-off tasks only (NOT content ideas, NOT product ideas)
 │   ├── experiments.md      # Rails as trackable hypotheses (success signal + review date)
+│   ├── autonomy.md         # AMM tracker: autonomy level of pipelines (L1→L5)
 │   ├── idea-to-production.md  # Gate 0 (alignment) + the idea→production stack
 │   ├── journal/            # Daily entries (YYYY-MM-DD.md)
 │   ├── templates/
@@ -104,7 +105,7 @@ docs/README in English).
 
 Commands: `/daily-review`, `/coach [priority|stuck|motivation]`, `/goals`, `/weekly-review`,
 `/monthly-review`, `/board-of-advisors`, `/decide`, `/process-captures`, `/weekly-improvement`,
-`/memory-consolidate`.
+`/memory-consolidate`, `/autonomy-review`, `/dream`.
 
 ---
 
@@ -113,6 +114,27 @@ Commands: `/daily-review`, `/coach [priority|stuck|motivation]`, `/goals`, `/wee
 New interventions are tracked as hypotheses in `goals/experiments.md`: each has a success signal
 and a review date; `/weekly-review` checks the ones that came due. A failed experiment is **data,
 not a personal failure** — try a *different* rail, not "more discipline". See `experiments.md`.
+
+---
+
+## Autonomy tracking (`goals/autonomy.md`)
+
+Each repeating workflow ("pipeline") has an autonomy level on the AMM scale (L1 Manual → L5
+Autonomous). `/autonomy-review` reads the current levels, inspects recent activity, updates scores,
+and outputs the one highest-leverage action for the week. Run as part of `/weekly-review` or
+standalone.
+
+The goal: move every pipeline toward L5 so your time goes to what only you can do.
+
+---
+
+## Sleep mode (hard rule)
+
+Sleep is a root habit — it directly gates energy, focus, and everything downstream.
+- Set a hard stop time (default: everything closed by 22:30, phone away by 23:00, lights out).
+- `/daily-review` tracks the sleep streak each morning and diagnoses what broke it.
+- When the same trigger breaks sleep twice → register an external rail in `experiments.md`.
+- Do not suggest "be more disciplined" — willpower is the last resort, not the first.
 
 ---
 

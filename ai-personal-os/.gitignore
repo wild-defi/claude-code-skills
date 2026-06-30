@@ -7,6 +7,8 @@ goals/IWS/**
 !goals/IWS/README.md
 !goals/IWS/IWS-INDEX.md
 !goals/IWS/**/.gitkeep
+!goals/IWS/dreams/README.md
+!goals/IWS/dreams/patterns.md
 
 # Daily journal entries
 goals/journal/**

@@ -10,7 +10,8 @@
 - **State:** (energy, mood)
 - **Focus:** (was I able to focus? what thoughts distracted me?)
 - **Good thing:** (what good thing happened today?)
-- **One word for the day:**
+- **Worry:** (what was weighing on my mind or causing anxiety?)
+- **Reaction → values:** (if something bothered me — what does that reaction say about what matters to me?)
 
 ## Observations
 -

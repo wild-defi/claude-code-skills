@@ -18,6 +18,8 @@ Do not read the whole folder.
 | `frameworks/act.md` | ACT techniques (defusion, acceptance, workability, committed action) |
 | `protocols/<name>.md` | One protocol per type of stuckness (short, openable in the moment) |
 | `reflections/<date>.md` | Deep reflections, dated |
+| `dreams/README.md` | Dream journal branch: how it works, privacy |
+| `dreams/patterns.md` | Living symbol index: recurring symbols, themes, emotions across dreams |
 
 ---
 
@@ -32,6 +34,7 @@ Came in with a topic → read only these files:
 | Patterns / who am I / traits | `self/traits.md` |
 | A specific framework | `frameworks/<name>.md` |
 | Deep reflection / a hard day | create/append `reflections/YYYY-MM-DD.md` |
+| Interpreting a dream | use `/dream` → `dreams/patterns.md` for recurring themes |
 | Unclear topic | read this INDEX → if still unclear, ask the user |
 
 ---

@@ -14,7 +14,8 @@
 2. Live the period (review date = external deadline for the check).
 3. `/weekly-review` checks for arrived review dates → compare against the signal → verdict.
 4. Verdict:
-   - ✅ **worked** → the rail stays; if it's a habit → it moves into the `weekly.md` tracker.
+   - ✅ **worked** → the rail stays; insight about yourself → L1 note in IWS (monthly synthesis
+     decides whether it reaches L0); if it's a habit → it moves into the `weekly.md` tracker.
    - ❌ **didn't work** → this is **data, not failure**: wrong rail → new experiment with a
      **different** rail (not "more discipline").
    - ❔ **unclear** → extend the review date or sharpen the success signal.
